@@ -99,21 +99,21 @@ export default function Home() {
       role: "Full Stack Developer",
       img: "/team/nabin-dhami.jpg",
       imgHover:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974",
+        "/team/nabin-dhami.jpg",
     },
     {
       name: "Bipan Pandey",
       role: "Graphics Designer",
       img: "/team/bipan-pandey.jpg",
       imgHover:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974",
+        "/team/bipan-pandey.jpg",
     },
     {
       name: "Suman Sapkota",
       role: "Frontend & UI/UX Designer",
       img: "/team/suman-sapkota.jpg",
       imgHover:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974",
+        "/team/suman-sapkota.jpg",
     },
   ];
   // partners data
