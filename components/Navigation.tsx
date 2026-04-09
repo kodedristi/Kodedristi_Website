@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -23,7 +24,7 @@ export function Navigation() {
     <>
       <nav className="fixed w-full z-[999] bg-black/90 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-3 border-b border-white/10">
         <Link href="/" className="text-2xl font-extrabold text-primary tracking-tight">
-          <img src="/white_logo.png" className="h-10 md:h-12 object-contain" alt="Logo" />
+          <Image src="/Logo.png" width={150} height={48} className="h-10 md:h-12 w-auto object-contain" priority alt="Logo" />
         </Link>
 
         <button
