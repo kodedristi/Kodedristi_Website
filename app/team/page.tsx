@@ -12,13 +12,15 @@ if (typeof window !== 'undefined') {
 export default function Team() {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  
+
   const leadersData = [
     {
       title: 'Full Stack Developer',
       name: 'Nabin Dhami',
       desc: 'Expert in end-to-end development. Architects scalable systems from database layer to polished UI with precision.',
       img: '/team/nabin-dhami.jpg',
-      imgHover: '/team/nabin-dhami.jpg',
+      imgHover: '/team/nabin_dhami1.jpg',
     },
     {
       title: 'Graphics Designer',
@@ -32,7 +34,7 @@ export default function Team() {
       name: 'Suman Sapkota',
       desc: 'Crafts seamless, pixel-perfect user experiences. Bridges design intent with engineering reality.',
       img: '/team/suman-sapkota.jpg',
-      imgHover: ' /team/suman-sapkota.jpg',
+      imgHover: ' /team/suman-sapkota1.jpg',
     },
   ];
 

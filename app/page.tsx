@@ -35,13 +35,13 @@ export default function Home() {
       phase: "01 / Discovery",
       title: "System Intelligence Audit",
       text: "We reverse-engineer your entire system — analyzing architecture, data flow, and dependencies to uncover hidden bottlenecks.",
-      img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072",
+      img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       phase: "02 / Architecture",
       title: "Scalable System Design",
       text: "We design robust, modular architectures aligned with your business logic — ensuring high performance and long-term scalability.",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069",
+      img: "https://plus.unsplash.com/premium_photo-1744944778150-12afe488303e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       phase: "03 / Engineering",
@@ -66,29 +66,39 @@ export default function Home() {
   // ── SERVICES DATA ─────────────────────────────────────────────────────────
   const servicesData = [
     {
-      title: "System Architecture",
-      desc: "We design scalable, fault-tolerant architectures tailored to your product — from database design to distributed systems.",
-      img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072",
+      title: "App Development",
+      desc: "We build high-performance mobile applications for Android and iOS using modern technologies like React Native and Flutter, tailored for global users.",
+      img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070",
     },
     {
-      title: "Full-Stack Engineering",
-      desc: "From intuitive frontend interfaces to robust backend systems, we build end-to-end applications using modern stacks.",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069",
+      title: "Web Development",
+      desc: "From business websites to complex web platforms, we create fast, responsive, and scalable web applications using modern stacks like React, Next.js, and Node.js.",
+      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070",
+    },
+    {
+      title: "SaaS Product Development",
+      desc: "We design and develop scalable SaaS platforms with multi-tenant architecture, subscription systems, and cloud deployment for startups and enterprises.",
+      img: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070",
     },
     {
       title: "AI & Smart Systems",
-      desc: "We integrate intelligent systems — from recommendation engines to adaptive learning models — transforming raw data into insights.",
+      desc: "We integrate AI-powered features like recommendation systems, chatbots, and adaptive learning solutions to make your product smarter and more efficient.",
       img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
     },
     {
-      title: "Cloud & DevOps",
-      desc: "We build and deploy scalable infrastructure with CI/CD pipelines, containerization, and cloud orchestration.",
-      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074",
+      title: "Custom Software Development",
+      desc: "We build tailored software solutions for businesses — including ERP systems, MIS, and digital transformation tools based on your exact needs.",
+      img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070",
     },
     {
-      title: "Security Engineering",
-      desc: "We implement secure-by-design systems with authentication, authorization, and data protection at every layer.",
-      img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070",
+      title: "SEO & Digital Growth",
+      desc: "We help your business grow online with SEO optimization, content strategy, and performance marketing focused on ranking and conversions.",
+      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070",
+    },
+    {
+      title: "Other IT Services",
+      desc: "We also provide UI/UX design, maintenance, cloud setup, DevOps, and IT consulting services for startups, NGOs, and enterprises .",
+      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070",
     },
   ];
 
@@ -98,28 +108,26 @@ export default function Home() {
       name: "Nabin Dhami",
       role: "Full Stack Developer",
       img: "/team/nabin-dhami.jpg",
-      imgHover:
-        "/team/nabin-dhami.jpg",
+      imgHover: "/team/nabin_dhami1.jpg",
     },
     {
       name: "Bipan Pandey",
       role: "Graphics Designer",
       img: "/team/bipan-pandey.jpg",
-      imgHover:
-        "/team/bipan-pandey.jpg",
+      imgHover: "/team/bipan-pandey.jpg",
     },
     {
       name: "Suman Sapkota",
       role: "Frontend & UI/UX Designer",
       img: "/team/suman-sapkota.jpg",
-      imgHover:
-        "/team/suman-sapkota.jpg",
+      imgHover: "/team/suman-sapkota1.jpg",
     },
   ];
   // partners data
   const partnersData = [
+    { name: "boxmandu", logo: "/partners/boxmandu.jpg" },
     { name: "Unigo", logo: "/partners/unigo.png" },
-    { name: "Linking Derams", logo: "/partners/linkingderams.png" },
+    { name: "Linking Derams", logo: "/partners/linking_dreams.jpg" },
   ];
 
   // ── GSAP ──────────────────────────────────────────────────────────────────
@@ -556,19 +564,21 @@ export default function Home() {
             Our Organizations & Partners
           </h3>
           <div className="flex w-full overflow-hidden">
-            <div className="gsap-partners-marquee flex whitespace-nowrap items-center w-max">
-              {partnersData.map((partner, i) => (
-                <div
-                  key={i}
-                  className="flex shrink-0 items-center gap-16 md:gap-28 px-8 md:px-14"
-                >
-                  <img
-                    src="/partner/unigo.png"
-                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                    alt={partner.name}
-                  />
-                </div>
-              ))}
+            <div className="gsap-partners-marquee flex whitespace-nowrap items-center">
+              {[...partnersData, ...partnersData, ...partnersData].map(
+                (partner, i) => (
+                  <div
+                    key={i}
+                    className="flex shrink-0 items-center gap-16 md:gap-28 px-8 md:px-14"
+                  >
+                    <img
+                      src={partner.logo}
+                      className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      alt={partner.name}
+                    />
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </section>

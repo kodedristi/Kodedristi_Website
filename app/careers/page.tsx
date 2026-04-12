@@ -14,10 +14,9 @@ export default function Careers() {
   const containerRef = useRef<HTMLDivElement>(null);
   
   const rolesData = [
-    { type: 'Engineering', role: 'Principal Systems Architect', loc: 'Remote / Global' },
-    { type: 'Data Science', role: 'Senior AI Researcher', loc: 'London / Hybrid' },
-    { type: 'Design', role: 'Lead UX Engineer', loc: 'New York / Hybrid' },
-    { type: 'Security', role: 'Zero-Touch Validator', loc: 'Remote / Global' },
+  
+    { type: 'Design', role: 'Lead UX Engineer', loc: 'Nepal / Hybrid' },
+    
   ];
 
   useGSAP(() => {
