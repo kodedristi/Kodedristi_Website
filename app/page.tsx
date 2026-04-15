@@ -35,31 +35,31 @@ export default function Home() {
       phase: "01 / Discovery",
       title: "System Intelligence Audit",
       text: "We reverse-engineer your entire system — analyzing architecture, data flow, and dependencies to uncover hidden bottlenecks.",
-      img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      // img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       phase: "02 / Architecture",
       title: "Scalable System Design",
       text: "We design robust, modular architectures aligned with your business logic — ensuring high performance and long-term scalability.",
-      img: "https://plus.unsplash.com/premium_photo-1744944778150-12afe488303e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      // img: "https://plus.unsplash.com/premium_photo-1744944778150-12afe488303e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       phase: "03 / Engineering",
       title: "Precision Development",
       text: "Our engineers build with clean, maintainable code using modern stacks — optimized for speed, security, and seamless integration.",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+      // img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
     },
     {
       phase: "04 / Deployment",
       title: "Zero-Downtime Delivery",
       text: "We implement CI/CD pipelines and deploy with precision — ensuring smooth rollouts, zero downtime, and production-grade reliability.",
-      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074",
+      // img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074",
     },
     {
       phase: "05 / Evolution",
       title: "Continuous Optimization",
       text: "We continuously monitor, analyze, and refine your system — adapting to scale and evolving with your business needs.",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070",
+      // img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070",
     },
   ];
 
@@ -109,18 +109,22 @@ export default function Home() {
       role: "Full Stack Developer",
       img: "/team/nabin-dhami.jpg",
       imgHover: "/team/nabin_dhami1.jpg",
+      linkedin: "https://linkedin.com"
     },
     {
       name: "Bipan Pandey",
       role: "Graphics Designer",
       img: "/team/bipan-pandey.jpg",
       imgHover: "/team/bipan-pandey.jpg",
+      linkedin: "https://linkedin.com"
     },
     {
       name: "Suman Sapkota",
       role: "Frontend & UI/UX Designer",
       img: "/team/suman-sapkota.jpg",
       imgHover: "/team/suman-sapkota1.jpg",
+      linkedin: "https://linkedin.com"
+
     },
   ];
   // partners data
@@ -128,6 +132,10 @@ export default function Home() {
     { name: "boxmandu", logo: "/partners/boxmandu.jpg" },
     { name: "Unigo", logo: "/partners/unigo.png" },
     { name: "Linking Derams", logo: "/partners/linking_dreams.jpg" },
+    { name: "renaissance library", logo: "/partners/renaissance-library-logo.png" },
+    { name: "kidzee", logo: "/partners/kidzee.svg" },
+    { name: "Career Academy", logo: "/partners/career-academy.png" },
+    { name: "Aristotle Academy", logo: "/partners/aristotle-academy.jpeg" },
   ];
 
   // ── GSAP ──────────────────────────────────────────────────────────────────
@@ -301,12 +309,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-background" />
 
           <div className="relative z-10 text-center flex flex-col items-center max-w-7xl px-8">
-            <div className="gsap-hero-element mb-6 inline-flex items-center gap-3 border border-primary/30 bg-primary/10 px-6 py-2 text-xs font-bold uppercase tracking-widest text-primary backdrop-blur-sm">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              Registrations Open · National Hackathon 2026
+            <div className="gsap-hero-element mb-6 inline-flex items-center gap-3 border border-white/30 bg-white/10 px-6 py-2 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-sm">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+              Registrations Open ·
             </div>
-            <h1 className="gsap-hero-element text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-6 tracking-tighter leading-[0.9] text-white uppercase drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-              AI | Robotics | IoT
+            <h1 className="gsap-hero-element text-4xl sm:text-6xl md:text-8xl lg:text-6xl font-black mb-6 tracking-tight leading-[0.9] text-white uppercase drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+              National<span className="text-primary mx-2"> AI</span> Hackathon 2026
             </h1>
             <p className="gsap-hero-element text-lg md:text-2xl text-gray-300 md:max-w-3xl mb-10 font-medium tracking-wide">
               Click anywhere to secure your spot at the most advanced
@@ -334,43 +342,7 @@ export default function Home() {
         </section>
 
         {/* ── Section 2: CEO Message ── */}
-        <section className="gsap-ceo-section relative min-h-screen w-full bg-background border-b border-white/10">
-          <div className="w-full h-screen flex items-center justify-center">
-            {ceoData.map((data, index) => (
-              <div
-                key={index}
-                className={`gsap-ceo-panel absolute inset-0 w-full h-full flex flex-col md:flex-row bg-background ${index === 0 ? "opacity-100 z-30" : "opacity-0 z-20"}`}
-              >
-                {/* Left: Full Image */}
-                <div className="w-full md:w-1/2 h-[45vh] md:h-full flex-shrink-0 relative overflow-hidden">
-                  <img
-                    src={data.img}
-                    className="w-full h-full object-cover object-center"
-                    alt="CEO Prabin Kumar Bogati"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/60 hidden md:block" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent md:hidden" />
-                </div>
 
-                {/* Right: Content */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 md:py-0 bg-background">
-                  <p className="text-primary font-black tracking-[0.3em] text-xs uppercase mb-6">
-                    {data.title}
-                  </p>
-                  <p className="text-white font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8">
-                    {data.text}
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="h-px w-12 bg-primary" />
-                    <p className="text-gray-400 font-mono text-sm">
-                      {data.author}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* ── Section 3: Our Approach (Horizontal Scroll) ── */}
         <section className="gsap-approach-section relative h-screen w-full bg-white overflow-hidden border-b border-black/10 w-auto">
@@ -396,14 +368,9 @@ export default function Home() {
               >
                 <div className="w-full max-w-6xl h-[70vh] md:h-[70vh] flex flex-col justify-end relative overflow-hidden group bg-black">
                   <div className="absolute inset-0 bg-black z-0">
-                    <img
-                      src={phase.img}
-                      className="w-full h-full object-cover opacity-60"
-                      alt={phase.title}
-                    />
                   </div>
                   <div className="relative z-10 p-8 md:p-12 md:w-1/2">
-                    <p className="text-primary font-bold tracking-widest uppercase mb-2 md:mb-4 text-sm md:text-base">
+                    <p className="text-white font-bold tracking-widest uppercase mb-2 md:mb-4 text-sm md:text-base">
                       {phase.phase}
                     </p>
                     <h3 className="text-3xl sm:text-5xl font-black text-white mb-4 md:mb-6 uppercase">
@@ -426,7 +393,7 @@ export default function Home() {
         >
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
             <div className="mb-16 md:mb-20">
-              <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4">
+              <p className="text-white font-bold tracking-[0.3em] uppercase text-xs mb-4">
                 Our People
               </p>
               <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-4">
@@ -469,7 +436,7 @@ export default function Home() {
                     </p>
                   </div>
                   {/* Hover corner arrow */}
-                  <div className="absolute top-6 right-6 w-10 h-10 border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <a href={member.linkedin} target="_blank"><div className="absolute top-6 right-6 w-10 h-10 border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg
                       width="16"
                       height="16"
@@ -482,6 +449,7 @@ export default function Home() {
                       <path d="M7 7h10v10" />
                     </svg>
                   </div>
+                    </a> */}
                 </div>
               ))}
             </div>
@@ -512,7 +480,7 @@ export default function Home() {
         <section className="gsap-service-section relative min-h-screen w-full bg-background border-b border-white/10 py-24 md:py-0 overflow-hidden">
           <div className="w-full h-full flex flex-col md:flex-row max-w-7xl mx-auto px-6 md:px-12 lg:pl-24 items-center justify-center gap-12">
             <div className="w-full md:w-1/3 flex-shrink-0">
-              <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4">
+              <p className="text-white font-bold tracking-[0.3em] uppercase text-xs mb-4">
                 What We Build
               </p>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-4 leading-tight">
@@ -539,8 +507,8 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   </div>
                   <div className="relative z-10">
-                    <p className="text-primary font-bold tracking-widest uppercase text-xs mb-3">
-                      0{index + 1} / Service
+                    <p className="text-white font-bold tracking-widest uppercase text-xs mb-3">
+                      0{index + 1}
                     </p>
                     <h3 className="text-3xl md:text-5xl font-black text-white mb-3 md:mb-4 uppercase leading-none">
                       {srv.title}
@@ -557,12 +525,12 @@ export default function Home() {
 
         {/* ── Section 6: Partners Marquee ── */}
         <section className="w-full bg-white py-16 md:py-24 border-b relative flex flex-col items-center justify-center overflow-hidden">
-          <p className="text-black text-center font-black tracking-[0.3em] uppercase mb-3 text-xs z-20">
+          <p className="text-black mb-10 text-center font-black tracking-[0.3em] uppercase text-xs z-20">
             Trusted By
           </p>
-          <h3 className="text-black text-center font-bold text-2xl md:text-3xl mb-10 md:mb-16 z-20">
-            Our Organizations & Partners
-          </h3>
+          {/* <h3 className="text-black text-center font-bold text-2xl md:text-3xl mb-10 md:mb-16 z-20">
+          Our Organizations & Partners
+        </h3> */}
           <div className="flex w-full overflow-hidden">
             <div className="gsap-partners-marquee flex whitespace-nowrap items-center">
               {[...partnersData, ...partnersData, ...partnersData].map(
@@ -573,7 +541,7 @@ export default function Home() {
                   >
                     <img
                       src={partner.logo}
-                      className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      className="h-12 md:h-16 object-contain   transition-all duration-300"
                       alt={partner.name}
                     />
                   </div>
@@ -583,6 +551,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </div>
+    </div >
   );
 }

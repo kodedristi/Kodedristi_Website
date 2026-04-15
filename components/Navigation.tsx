@@ -29,9 +29,9 @@ export function Navigation() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center hover:scale-95 transition-transform duration-200"
+          className="w-12 h-12 rounded-full bg-primary shadow-sm flex items-center justify-center hover:scale-95 transition-transform duration-200"
         >
-          <span className="text-primary text-xl">☰</span>
+          <span className="text-white text-xl">☰</span>
         </button>
       </nav>
 

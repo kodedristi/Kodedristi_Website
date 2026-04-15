@@ -12,7 +12,7 @@ export function Footer() {
       {/* Top CTA strip */}
       <div className="border-b border-white/10 py-12 md:py-16 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto">
         <div>
-          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-2">Ready to Build?</p>
+          <p className="text-white font-bold tracking-[0.3em] uppercase text-xs mb-2">Ready to Build?</p>
           <h3 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tight leading-none">
             Let's architect your<br />digital future.
           </h3>
@@ -30,7 +30,7 @@ export function Footer() {
         <p className="text-gray-600 text-xs font-medium">© 2025 Kodedristi Software. All rights reserved.</p>
         <div className="flex gap-6">
           {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((t) => (
-            <Link key={t} href="#" className="text-gray-600 hover:text-white text-xs font-medium transition-colors duration-200">{t}</Link>
+            <Link key={t} href="#" className="text-gray-300 hover:text-white text-xs font-medium transition-colors duration-200">{t}</Link>
           ))}
         </div>
       </div>
