@@ -6,7 +6,6 @@ import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { Toaster } from 'sonner';
-import { PageLoader } from '@/components/PageLoader';
 
 export const metadata: Metadata = {
   title: 'Kodedristi | Architecting the Future of Code',
@@ -30,16 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased font-sans">
-        <PageLoader>
-          <div className="bg-background text-foreground overflow-x-clip">
-            <Navigation />
-            <Sidebar />
-            <SmoothScroll>
-              {children}
-            </SmoothScroll>
-            <Footer />
-          </div>
-        </PageLoader>
+        <div className="bg-background text-foreground overflow-x-clip">
+          <Navigation />
+          <Sidebar />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+          <Footer />
+        </div>
         <Toaster position="bottom-right" />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
