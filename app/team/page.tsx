@@ -40,22 +40,22 @@ export default function Team() {
       title: 'Django Developer',
       name: 'Prabin Kumar Bogati',
       desc: 'Specialist in robust backend solutions. Builds secure, scalable APIs and services that power dynamic web applications.',
-      img: '/team/prabin-kumar-bogati.jpg',
-      imgHover: '/team/prabin-kumar-bogati1.jpg',
+      img: '/placeholder-user.jpg',
+      imgHover: '/placeholder-user.jpg',
     },
     {
       title: 'SEO Specialist',
       name: 'Abiskar Dahal',
       desc: 'Specialist in search engine optimization. Drives organic traffic and improves online visibility for brands.',
-      img: '/team/abiskar-dahal.jpg',
-      imgHover: '/team/abiskar-dahal1.jpg',
+      img: '/placeholder-user.jpg',
+      imgHover: '/placeholder-user.jpg',
     },
     {
       title: 'Flutter Developer',
       name: 'Rishab Dev Chudali',
       desc: 'Expert in cross-platform mobile development. Creates high-performance, visually stunning apps with Flutter.',
-      img: '/team/rishab-dev-chudali.jpg',
-      imgHover: '/team/rishab-dev-chudali1.jpg',
+      img: '/placeholder-user.jpg',
+      imgHover: '/placeholder-user.jpg',
     },
   ];
 
