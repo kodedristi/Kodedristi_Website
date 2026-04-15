@@ -36,6 +36,27 @@ export default function Team() {
       img: '/team/suman-sapkota.jpg',
       imgHover: ' /team/suman-sapkota1.jpg',
     },
+    {
+      title: 'Django Developer',
+      name: 'Prabin Kumar Bogati',
+      desc: 'Specialist in robust backend solutions. Builds secure, scalable APIs and services that power dynamic web applications.',
+      img: '/team/prabin-kumar-bogati.jpg',
+      imgHover: '/team/prabin-kumar-bogati1.jpg',
+    },
+    {
+      title: 'SEO Specialist',
+      name: 'Abiskar Dahal',
+      desc: 'Specialist in search engine optimization. Drives organic traffic and improves online visibility for brands.',
+      img: '/team/abiskar-dahal.jpg',
+      imgHover: '/team/abiskar-dahal1.jpg',
+    },
+    {
+      title: 'Flutter Developer',
+      name: 'Rishab Dev Chudali',
+      desc: 'Expert in cross-platform mobile development. Creates high-performance, visually stunning apps with Flutter.',
+      img: '/team/rishab-dev-chudali.jpg',
+      imgHover: '/team/rishab-dev-chudali1.jpg',
+    },
   ];
 
   useGSAP(() => {
@@ -134,9 +155,9 @@ export default function Team() {
                   </div>
 
                   {/* Corner arrow revealed on hover */}
-                  <div className="absolute top-6 right-6 w-10 h-10 border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  {/* <div className="absolute top-6 right-6 w-10 h-10 border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-                  </div>
+                  </div> */}
 
                   {/* Info */}
                   <div className="relative z-10 flex flex-col justify-end h-full p-8 transform group-hover:-translate-y-2 transition-transform duration-500">

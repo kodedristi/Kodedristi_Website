@@ -7,16 +7,33 @@ export function PageLoader({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if document is already loaded
+    let cleared = false;
+
+    const dismiss = () => {
+      if (!cleared) {
+        cleared = true;
+        setIsLoading(false);
+      }
+    };
+
+    // Hard max timeout — always dismisses after 4s regardless (critical for iOS Safari)
+    const maxTimer = setTimeout(dismiss, 4000);
+
+    // Normal path — dismiss quickly once page is ready
     if (document.readyState === 'complete') {
-      const timer = setTimeout(() => setIsLoading(false), 500);
-      return () => clearTimeout(timer);
+      const timer = setTimeout(dismiss, 500);
+      return () => { clearTimeout(timer); clearTimeout(maxTimer); };
     } else {
-      const handleLoad = () => {
-        setTimeout(() => setIsLoading(false), 500);
+      const handleLoad = () => setTimeout(dismiss, 500);
+      // iOS Safari: also listen to DOMContentLoaded as fallback
+      const handleDCL = () => setTimeout(dismiss, 1200);
+      window.addEventListener('load', handleLoad, { once: true });
+      document.addEventListener('DOMContentLoaded', handleDCL, { once: true });
+      return () => {
+        clearTimeout(maxTimer);
+        window.removeEventListener('load', handleLoad);
+        document.removeEventListener('DOMContentLoaded', handleDCL);
       };
-      window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
     }
   }, []);
 

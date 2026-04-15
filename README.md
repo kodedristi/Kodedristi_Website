@@ -15,7 +15,7 @@ A modern, fully-responsive enterprise software architecture showcase built with 
 ## 📁 Project Structure
 
 ```
-/vercel/share/v0-project/
+/vercel/share/kodedristi/
 ├── app/
 │   ├── layout.tsx              # Root layout with design system
 │   ├── globals.css             # Global styles

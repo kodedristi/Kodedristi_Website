@@ -141,14 +141,7 @@ export default function Home() {
   // ── GSAP ──────────────────────────────────────────────────────────────────
   useGSAP(
     () => {
-      // Page reveal
-      gsap.to(".gsap-global-wrapper", {
-        opacity: 1,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-
-      // Hero entrance
+      // Hero entrance (after PageLoader dismisses)
       gsap.fromTo(
         ".gsap-hero-element",
         { opacity: 0, y: 40 },
@@ -158,7 +151,7 @@ export default function Home() {
           stagger: 0.18,
           duration: 1.1,
           ease: "power3.out",
-          delay: 0.4,
+          delay: 0.3,
         },
       );
 
@@ -290,7 +283,7 @@ export default function Home() {
       className="bg-background text-foreground overflow-x-clip"
       ref={containerRef}
     >
-      <main className="w-full opacity-0 gsap-global-wrapper">
+      <main className="w-full gsap-global-wrapper">
         {/* ── Section 1: Hero ── */}
         <section
           id="hero"
@@ -344,19 +337,46 @@ export default function Home() {
         {/* ── Section 2: CEO Message ── */}
 
 
-        {/* ── Section 3: Our Approach (Horizontal Scroll) ── */}
-        <section className="gsap-approach-section relative h-screen w-full bg-white overflow-hidden border-b border-black/10 w-auto">
-          <div className="absolute bottom-6 md:bottom-12 left-6 md:left-24 z-20 pointer-events-none mix-blend-difference">
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white uppercase tracking-tighter mix-blend-difference drop-shadow-[0_0_15px_rgba(0,0,0,1)]">
+        {/* ── Section 3: Our Approach ── */}
+
+        {/* MOBILE: Normal vertical layout (hidden on md+) */}
+        <section className="block md:hidden w-full bg-white border-b border-black/10 px-5 py-16">
+          <h2 className="text-5xl font-black text-black uppercase tracking-tighter mb-3">
+            Our Approach
+          </h2>
+          <p className="text-base font-medium text-gray-600 mb-10 leading-snug">
+            We execute rigorously. Our operational pipeline guarantees absolute consistency.
+          </p>
+          <div className="flex flex-col gap-4">
+            {approachData.map((phase, i) => (
+              <div key={i} className="w-full bg-black p-6 flex flex-col gap-3">
+                <p className="text-primary font-bold tracking-widest uppercase text-xs">
+                  {phase.phase}
+                </p>
+                <h3 className="text-2xl font-black text-white uppercase leading-tight">
+                  {phase.title}
+                </h3>
+                <p className="text-gray-400 font-medium text-sm leading-relaxed">
+                  {phase.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* DESKTOP: GSAP Horizontal Scroll (hidden on mobile) */}
+        <section className="gsap-approach-section hidden md:block relative h-screen w-full bg-white overflow-hidden border-b border-black/10">
+          <div className="absolute bottom-12 left-24 z-20 pointer-events-none mix-blend-difference">
+            <h2 className="text-8xl font-black text-white uppercase tracking-tighter mix-blend-difference drop-shadow-[0_0_15px_rgba(0,0,0,1)]">
               Our Approach
             </h2>
           </div>
           <div className="gsap-approach-wrapper flex flex-nowrap h-full items-center relative z-10 w-max">
-            <div className="w-[100vw] md:w-[70vw] h-full flex flex-col justify-center px-6 lg:px-24 bg-white flex-shrink-0">
-              <h3 className="text-primary text-xl md:text-3xl font-bold uppercase tracking-widest mb-4">
+            <div className="w-[70vw] h-full flex flex-col justify-center px-24 bg-white flex-shrink-0">
+              <h3 className="text-primary text-3xl font-bold uppercase tracking-widest mb-4">
                 → Swipe Process
               </h3>
-              <p className="text-2xl sm:text-4xl md:text-5xl font-medium text-black max-w-3xl leading-tight">
+              <p className="text-5xl font-medium text-black max-w-3xl leading-tight">
                 We execute rigorously. Our operational pipeline guarantees
                 absolute consistency.
               </p>
@@ -364,19 +384,18 @@ export default function Home() {
             {approachData.map((phase, i) => (
               <div
                 key={i}
-                className="w-[82vw] md:w-[80vw] lg:w-[78vw] h-full flex items-center justify-center p-1 md:p-2 flex-shrink-0 bg-white"
+                className="w-[80vw] lg:w-[78vw] h-full flex items-center justify-center p-2 flex-shrink-0 bg-white"
               >
-                <div className="w-full max-w-6xl h-[70vh] md:h-[70vh] flex flex-col justify-end relative overflow-hidden group bg-black">
-                  <div className="absolute inset-0 bg-black z-0">
-                  </div>
-                  <div className="relative z-10 p-8 md:p-12 md:w-1/2">
-                    <p className="text-white font-bold tracking-widest uppercase mb-2 md:mb-4 text-sm md:text-base">
+                <div className="w-full max-w-6xl h-[70vh] flex flex-col justify-end relative overflow-hidden group bg-black">
+                  <div className="absolute inset-0 bg-black z-0" />
+                  <div className="relative z-10 p-12 w-1/2">
+                    <p className="text-white font-bold tracking-widest uppercase mb-4 text-base">
                       {phase.phase}
                     </p>
-                    <h3 className="text-3xl sm:text-5xl font-black text-white mb-4 md:mb-6 uppercase">
+                    <h3 className="text-5xl font-black text-white mb-6 uppercase">
                       {phase.title}
                     </h3>
-                    <p className="text-gray-300 font-medium text-lg md:text-2xl">
+                    <p className="text-gray-300 font-medium text-2xl">
                       {phase.text}
                     </p>
                   </div>
@@ -409,7 +428,7 @@ export default function Home() {
               {homeTeamData.map((member, i) => (
                 <div
                   key={i}
-                  className="gsap-home-team-card group relative h-[520px] overflow-hidden bg-black border border-white/10 cursor-crosshair"
+                  className="gsap-home-team-card group relative h-[400px] sm:h-[520px] overflow-hidden bg-black border border-white/10 cursor-crosshair"
                 >
                   {/* Primary image */}
                   <img
@@ -476,27 +495,52 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Section 5: Core Services (Fade Pinned) ── */}
-        <section className="gsap-service-section relative min-h-screen w-full bg-background border-b border-white/10 py-24 md:py-0 overflow-hidden">
-          <div className="w-full h-full flex flex-col md:flex-row max-w-7xl mx-auto px-6 md:px-12 lg:pl-24 items-center justify-center gap-12">
-            <div className="w-full md:w-1/3 flex-shrink-0">
+        {/* ── Section 5: Core Services ── */}
+
+        {/* MOBILE: Normal vertical list (hidden on md+) */}
+        <section className="block md:hidden w-full bg-background border-b border-white/10 px-5 py-16">
+          <p className="text-white font-bold tracking-[0.3em] uppercase text-xs mb-4">
+            What We Build
+          </p>
+          <h2 className="text-5xl font-black text-white uppercase tracking-tighter mb-10 leading-tight">
+            Core<br />Services
+          </h2>
+          <div className="flex flex-col gap-4">
+            {servicesData.map((srv, index) => (
+              <div key={index} className="w-full bg-black border border-white/10 p-6 flex flex-col gap-2">
+                <p className="text-white/50 font-bold tracking-widest uppercase text-xs">
+                  0{index + 1}
+                </p>
+                <h3 className="text-xl font-black text-white uppercase leading-tight">
+                  {srv.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {srv.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* DESKTOP: GSAP Fade-Pinned (hidden on mobile) */}
+        <section className="gsap-service-section hidden md:flex relative min-h-screen w-full bg-background border-b border-white/10 overflow-hidden">
+          <div className="w-full h-full flex flex-row max-w-7xl mx-auto px-12 lg:pl-24 items-center justify-center gap-12">
+            <div className="w-1/3 flex-shrink-0">
               <p className="text-white font-bold tracking-[0.3em] uppercase text-xs mb-4">
                 What We Build
               </p>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-4 leading-tight">
-                Core
-                <br />
-                Services
+              <h2 className="text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-4 leading-tight">
+                Core<br />Services
               </h2>
               <p className="text-gray-500 text-sm font-medium">
                 Scroll through our core offerings.
               </p>
             </div>
-            <div className="w-full md:w-2/3 h-[55vh] md:h-[65vh] relative">
+            <div className="w-2/3 h-[65vh] relative">
               {servicesData.map((srv, index) => (
                 <div
                   key={index}
-                  className={`gsap-service-panel absolute inset-0 w-full h-full border border-white/10 flex flex-col justify-end p-8 md:p-12 bg-black ${index === 0 ? "opacity-100 z-30" : "opacity-0 z-20"}`}
+                  className={`gsap-service-panel absolute inset-0 w-full h-full border border-white/10 flex flex-col justify-end p-12 bg-black ${index === 0 ? "opacity-100 z-30" : "opacity-0 z-20"}`}
                 >
                   <div className="absolute inset-0 z-0 bg-black">
                     <img
@@ -510,10 +554,10 @@ export default function Home() {
                     <p className="text-white font-bold tracking-widest uppercase text-xs mb-3">
                       0{index + 1}
                     </p>
-                    <h3 className="text-3xl md:text-5xl font-black text-white mb-3 md:mb-4 uppercase leading-none">
+                    <h3 className="text-5xl font-black text-white mb-4 uppercase leading-none">
                       {srv.title}
                     </h3>
-                    <p className="text-gray-300 font-medium text-base md:text-xl max-w-2xl leading-relaxed">
+                    <p className="text-gray-300 font-medium text-xl max-w-2xl leading-relaxed">
                       {srv.desc}
                     </p>
                   </div>

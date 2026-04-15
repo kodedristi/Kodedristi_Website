@@ -27,8 +27,8 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-6 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-gray-600 text-xs font-medium">© 2025 Kodedristi Software. All rights reserved.</p>
-        <div className="flex gap-6">
+        <p className="text-gray-600 text-xs font-center text-center md:text-left md:font-medium">© 2025 Kodedristi Software. All rights reserved.</p>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
           {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((t) => (
             <Link key={t} href="#" className="text-gray-300 hover:text-white text-xs font-medium transition-colors duration-200">{t}</Link>
           ))}
