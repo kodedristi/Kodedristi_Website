@@ -300,11 +300,11 @@ export default function Home() {
           className="group relative h-screen w-full flex items-center justify-center overflow-hidden border-b border-white/10 cursor-pointer"
         >
           <div className="absolute inset-0 bg-black">
-            <img
+            {/* <img
               src="https://images.unsplash.com/photo-1737644467636-6b0053476bb2?q=80&w=2144&auto=format&fit=crop"
               className="gsap-hero-bg w-full h-full object-cover opacity-60 transition-opacity duration-700 group-hover:opacity-80"
               alt="Hero background"
-            />
+            /> */}
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-background" />
 
