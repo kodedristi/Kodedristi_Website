@@ -121,31 +121,19 @@
     /* Prevent tap highlight on mobile */
     -webkit-tap-highlight-color: transparent;
   }
-  html {
-    /* Fix iOS Safari 100vh bug */
-    height: -webkit-fill-available;
-  }
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
     /* iOS momentum scroll */
     -webkit-overflow-scrolling: touch;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: 100dvh;
     /* Prevent font size inflation on iOS rotation */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  /* Fix fixed positioning on iOS Safari */
-  .fixed {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  /* Prevent horizontal scroll on mobile ONLY — do NOT apply on desktop (breaks GSAP horizontal scroll) */
   @media (max-width: 767px) {
-    main, section {
+    main {
       max-width: 100vw;
-      overflow-x: hidden;
     }
   }
 }

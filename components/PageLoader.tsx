@@ -37,6 +37,21 @@ export function PageLoader({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      // Trigger a resize event to ensure GSAP ScrollTrigger recalculates layout bounds
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 50);
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLoading]);
+
   return (
     <>
       <AnimatePresence mode="wait">
@@ -86,9 +101,10 @@ export function PageLoader({ children }: { children: React.ReactNode }) {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className={isLoading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100 transition-opacity duration-1000'}>
+      <div className={isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100 transition-opacity duration-1000'}>
         {children}
       </div>
     </>
   );
 }
+

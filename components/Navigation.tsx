@@ -40,7 +40,7 @@ export function Navigation() {
         initial={{ x: '100%' }}
         animate={{ x: menuOpen ? 0 : '100%' }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="fixed right-0 top-0 h-full w-full sm:w-[450px] md:w-[500px] lg:w-[400px] z-[1001] bg-primary dark:bg-primary shadow-2xl flex flex-col p-8 md:p-12 space-y-8"
+        className="fixed right-0 top-0 h-[100dvh] w-full sm:w-[450px] md:w-[500px] lg:w-[400px] z-[1001] bg-primary dark:bg-primary shadow-2xl flex flex-col p-8 md:p-12 space-y-8"
       >
         <div className="flex justify-between items-start">
           <div>

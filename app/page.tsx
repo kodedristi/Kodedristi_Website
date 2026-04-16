@@ -121,8 +121,8 @@ export default function Home() {
     {
       name: "Suman Sapkota",
       role: "Frontend & UI/UX Designer",
-      img: "/team/suman-sapkota.jpg",
-      imgHover: "/team/suman-sapkota1.jpg",
+      img: "/team/suman_sapkota.jpg",
+      imgHover: "/team/suman_sapkota1.jpg",
       linkedin: "https://linkedin.com"
 
     },
@@ -290,7 +290,7 @@ export default function Home() {
           onClick={() =>
             window.open("https://forms.gle/k9XYt89brsv3dgLUA", "_blank")
           }
-          className="group relative h-screen w-full flex items-center justify-center overflow-hidden border-b border-white/10 cursor-pointer"
+          className="group relative h-[100dvh] w-full flex items-center justify-center overflow-hidden border-b border-white/10 cursor-pointer"
         >
           <div className="absolute inset-0 bg-black">
             {/* <img
