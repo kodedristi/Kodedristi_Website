@@ -191,7 +191,7 @@ export const eventTeamData = [
   { name: "Prabin Kumar Bogati", role: "Event Director", img: "/home/prabin-kumar-bogati.jpeg" },
   { name: "Suman Sapkota", role: "Project Manager", img: "/team/suman_sapkota.jpg" },
   { name: "Pratima Khanal", role: "Marketing & PR Lead", img: "/team/pratima_khanal.jpeg" },
-  { name: "Abiral Sangraula", role: "Senior Advisor", img: "/team/abiral_sangraula.jpg" },
+  { name: "Abiral Sangraula", role: "Senior Advisor", img: "/team/abiral_sangroula.jpeg" },
   { name: "Nabin Dhami", role: "Technical Lead", img: "/team/nabin-dhami.jpg" },
   { name: "Rishab Dev Chudali", role: "Technical Lead", img: "/team/rishab-dev-chudali.jpeg" },
   { name: "Asmita katwal", role: "Event Co-ordinator", img: "/team/asmita_katwal.jpeg" },
