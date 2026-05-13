@@ -15,6 +15,15 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: '/event-details',
+        destination: '/events',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
