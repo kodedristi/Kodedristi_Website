@@ -25,7 +25,7 @@ export function Navigation() {
     <>
       <nav className="fixed w-full z-[999] bg-black/90 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-3 border-b border-white/10">
         <Link href="/" className="text-2xl font-extrabold text-primary tracking-tight">
-          <Image src="/logo.png" width={150} height={48} className="h-10 md:h-12 object-contain" style={{ width: 'auto' }} priority alt="Logo" />
+          <Image src="/logo.webp" width={150} height={48} className="h-10 md:h-12 object-contain" style={{ width: 'auto' }} priority alt="Kodedristi Logo" />
         </Link>
 
         <button

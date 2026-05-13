@@ -9,7 +9,7 @@ export const ceoData = [
     title: "The Standard",
     text: '"Zero legacy debt. Zero compromise. We hire the top 0.1% of global engineering talent because the systems we build run the world."',
     author: "— Prabin Kumar Bogati, CEO",
-    img: "/home/prabin-kumar-bogati-1.png",
+    img: "/home/prabin-kumar-bogati-1.jpg",
   },
 ];
 
@@ -93,7 +93,7 @@ export const teamData = [
     role: "CEO & AI/ML Engineer",
     desc: "Develops intelligent systems using machine learning. Turns data into predictive and automated solutions.",
     img: "/home/prabin-kumar-bogati.jpeg",
-    imgHover: "/home/prabin-kumar-bogati-1.png",
+    imgHover: "/home/prabin-kumar-bogati-1.jpg",
     linkedin: "https://linkedin.com",
   },
   {
@@ -172,8 +172,8 @@ export const teamData = [
     name: "Sujal Panday",
     role: "Frontend Developer",
     desc: "Implements responsive web interfaces using modern frameworks. Turns complex logic into simple interactions.",
-    img: "/team/suzal_pandey.png",
-    imgHover: "/team/suzal_pandey.png",
+    img: "/team/suzal_pandey.jpg",
+    imgHover: "/team/suzal_pandey.jpg",
     linkedin: "https://linkedin.com",
   },
   {
@@ -200,7 +200,7 @@ export const eventTeamData = [
   { name: "Anish Basnet", role: "Logistic Coordinator", img: "/team/anish_basnet.jpg" },
   { name: "Abiskar Dahal", role: "Logistics Coordinator", img: "/team/abiskar_dahal.jpeg" },
   { name: "Sameera Sunar", role: "Logistics Coordinator", img: "/team/sameera_sunar.jpeg" },
-  { name: "Sujal Panday", role: "Volunteer Coordinator", img: "/team/suzal_pandey.png" },
+  { name: "Sujal Panday", role: "Volunteer Coordinator", img: "/team/suzal_pandey.jpg" },
   { name: "Bishwanath Ghimire", role: "Community Manager", img: "/team/bishwanath_ghimire.jpeg" },
   { name: "Susan Pariyar", role: "Community Manager", img: "/team/susan_pariyar.jpg" },
   { name: "Sanjish Thapa Magar", role: "Volunteer Coordinator", img: "/team/sanjish-thapa-magar.jpeg" },
