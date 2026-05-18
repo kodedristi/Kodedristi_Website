@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export function Sidebar() {
   const pathname = usePathname();
-  const isEventPage = pathname?.startsWith('/events');
+  const isEventPage = pathname?.startsWith('/hackathon');
 
   const socialLinks = [
     {

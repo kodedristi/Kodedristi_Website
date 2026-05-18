@@ -29,7 +29,7 @@ export function Hero() {
         </p>
         <div className="gsap-hero-element flex flex-col md:flex-row items-center gap-8 mt-4">
           <Link
-            href="/events"
+            href="/hackathon"
             onClick={(e) => e.stopPropagation()}
             className="group relative inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white uppercase tracking-widest bg-primary hover:bg-blue-600 rounded-full overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] hover:scale-105"
           >
