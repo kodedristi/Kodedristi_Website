@@ -132,7 +132,7 @@ export default function Team() {
                         src={leader.img}
                         alt={leader.name}
                         fill
-                        className="object-cover object-top opacity-90 grayscale"
+                        className={`object-cover ${leader.position || "object-top"} opacity-90 grayscale`}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
@@ -142,7 +142,7 @@ export default function Team() {
                         src={leader.imgHover}
                         alt={`${leader.name} alternate view`}
                         fill
-                        className="object-cover object-top"
+                        className={`object-cover ${leader.position || "object-top"}`}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>

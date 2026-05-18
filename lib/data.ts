@@ -110,6 +110,7 @@ export const teamData = [
     desc: "Crafts seamless, pixel-perfect user experiences. Bridges design intent with engineering reality.",
     img: "/team/suman_sapkota.jpg",
     imgHover: "/team/suman_sapkota1.jpg",
+    position: "object-center",
     linkedin: "https://linkedin.com",
   },
   {
@@ -196,7 +197,7 @@ export const eventTeamData = [
   { name: "Rishab Dev Chudali", role: "Technical Lead", img: "/team/rishab-dev-chudali.jpeg" },
   { name: "Asmita katwal", role: "Event Co-ordinator", img: "/team/asmita_katwal.jpeg" },
   { name: "Dipti Madai", role: "Event Co-ordinator", img: "/team/dipti_madai1.jpeg" },
-  { name: "Aashish Bhattarai", role: "Design Lead", img: "/team/aasish_bhattrai.jpeg" },
+  { name: "Sugam Adhikari", role: "Design Lead", img: "/team/sugam_adhikari.jpeg" },
   { name: "Anish Basnet", role: "Logistic Coordinator", img: "/team/anish_basnet.jpg" },
   { name: "Abiskar Dahal", role: "Logistics Coordinator", img: "/team/abiskar_dahal.jpeg" },
   { name: "Sameera Sunar", role: "Logistics Coordinator", img: "/team/sameera_sunar.jpeg" },
