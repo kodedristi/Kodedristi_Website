@@ -206,7 +206,7 @@ export const eventTeamData = [
   { name: "Susan Pariyar", role: "Community Manager", img: "/team/susan_pariyar.jpg" },
   { name: "Sanjish Thapa Magar", role: "Volunteer Coordinator", img: "/team/sanjish-thapa-magar.jpeg" },
   { name: "Sunny Jha", role: "Volunteer Coordinator", img: "/team/sunny_jha.jpeg" },
-  { name: "Sarmila Bogati", role: "Head of Design Division", img: "/team/sarmila_bogati.jpeg" },
+  { name: "Sarmila Bogati", role: "Medical Advisor", img: "/team/sarmila_bogati.jpeg" },
 ];
 
 export const testimonialsData = [
