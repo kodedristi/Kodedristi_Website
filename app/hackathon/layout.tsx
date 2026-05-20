@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   description: "Join the most advanced engineering event of the decade. 48 hours to code the future.",
 };
 
-export default function EventsLayout({ children }: { children: React.ReactNode }) {
+export default function HackathonLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

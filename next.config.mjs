@@ -29,7 +29,12 @@ const nextConfig = {
     return [
       {
         source: '/event-details',
-        destination: '/events',
+        destination: '/hackathon',
+        permanent: true,
+      },
+      {
+        source: '/events',
+        destination: '/hackathon',
         permanent: true,
       },
     ];
@@ -47,13 +52,6 @@ const nextConfig = {
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-        ],
-      },
-      {
-        // Aggressive immutable cache for all hashed static assets
-        source: '/_next/static/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {

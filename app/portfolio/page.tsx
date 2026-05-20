@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -124,9 +125,12 @@ export default function Portfolio() {
         {/* ── Hero ── */}
         <section id="portfolio-hero" className="relative h-[72vh] w-full flex items-end overflow-hidden border-b border-white/10">
           <div className="absolute inset-0 bg-black">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070"
-              className="gsap-hero-bg w-full h-[130%] object-cover opacity-40 block origin-top"
+              fill
+              priority
+              sizes="100vw"
+              className="gsap-hero-bg !h-[130%] object-cover opacity-40 origin-top"
               alt="Portfolio hero"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
@@ -168,9 +172,11 @@ export default function Portfolio() {
                   }`}
                 >
                   {/* Image */}
-                  <img
+                  <Image
                     src={project.img}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-in-out"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700 ease-in-out"
                     alt={project.title}
                   />
 

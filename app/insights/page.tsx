@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -51,7 +52,7 @@ export default function Insights() {
               {newsData.map((news, i) => (
                 <div key={i} className="gsap-news-item group flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center border border-white/5 bg-white/5 p-6 md:p-8 hover:bg-white/10 transition-colors">
                   <div className="w-full md:w-1/3 aspect-video relative overflow-hidden flex-shrink-0">
-                    <img src={news.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={news.title} />
+                    <Image src={news.img} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" alt={news.title} />
                   </div>
                   <div className="w-full md:w-2/3 flex flex-col">
                     <div className="flex gap-4 items-center mb-3 md:mb-4">

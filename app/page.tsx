@@ -10,6 +10,7 @@ import { TeamSection } from "@/components/home/TeamSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { PartnersMarquee } from "@/components/home/PartnersMarquee";
 
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -135,4 +136,5 @@ export default function Home() {
       </main>
     </div>
   );
+
 }

@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, ChevronDown, Clock } from "lucide-react";
+import { Sparkles, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
-export default function HeroDetails() {
+export default function HeroDetailsSection() {
   const [particles, setParticles] = useState<any[]>([]);
 
   useEffect(() => {
@@ -58,11 +58,11 @@ export default function HeroDetails() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-          className="inline-flex items-center gap-2 px-6 py-2.5  border border-gray-200 bg-white/80 backdrop-blur-md shadow-sm mb-12 relative overflow-hidden group"
+          className="inline-flex items-center gap-3 px-6 py-2.5  border border-gray-200 bg-white/80 backdrop-blur-md shadow-sm mb-12 relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#00a884]/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          
-          <span className="text-gray-800 text-sm font-bold tracking-widest uppercase">The Next Generation Hackathon</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-[#00a884] animate-pulse" />
+          <span className="text-gray-800 text-xs sm:text-sm font-bold tracking-widest uppercase">Registration Open Now</span>
         </motion.div>
 
         {/* Logo / Title Area */}
@@ -104,13 +104,17 @@ export default function HeroDetails() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 items-center justify-center"
         >
-          <button className="group relative inline-flex items-center justify-center px-10 py-5 text-sm md:text-base font-bold text-white uppercase tracking-widest bg-black  overflow-hidden transition-all duration-500 shadow-2xl ">
+          <a
+            href="https://forms.gle/k9XYt89brsv3dgLUA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center px-10 py-5 text-sm md:text-base font-bold text-white uppercase tracking-widest bg-black overflow-hidden transition-all duration-500 shadow-2xl hover:scale-105 active:scale-95 cursor-pointer"
+          >
             <span className="relative z-10 flex items-center gap-3">
-              <Clock className="w-5 h-5 group-hover:animate-spin-slow" />
-              Registrations Opening Soon
+              {/* <Sparkles className="w-5 h-5 text-yellow-400 group-hover:animate-pulse" /> */}
+              Register Now
             </span>
-            
-          </button>
+          </a>
         </motion.div>
         </div>
       
