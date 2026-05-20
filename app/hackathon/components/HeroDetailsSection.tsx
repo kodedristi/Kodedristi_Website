@@ -73,6 +73,7 @@ export default function HeroDetailsSection() {
           className="relative inline-flex flex-col items-center mb-14 w-full"
         >
           {/* Hackathon Logo Image */}
+          <h1 className="sr-only">National AI Hackathon 2026</h1>
           <div className="w-full max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px] relative z-10 group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#00a884] to-blue-600 rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity duration-700 " />
             <Image 

@@ -24,6 +24,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kodedristi.com'), // Adjust URL to the actual domain if necessary, assuming kodedristi.com
+  alternates: {
+    canonical: './',
+  },
   title: {
     default: 'Kodedristi | Architecting the Future of Code',
     template: '%s | Kodedristi',
@@ -73,7 +76,6 @@ export const metadata: Metadata = {
     ],
     shortcut: '/favicon.ico',
   },
-  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -92,9 +94,54 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Kodedristi',
+    'url': 'https://kodedristi.com',
+    'logo': 'https://kodedristi.com/logo.webp',
+    'sameAs': [
+      'https://github.com/kodedristi'
+    ],
+    'contactPoint': {
+      '@type': 'ContactPoint',
+      'telephone': '+977-985-136-2001',
+      'contactType': 'customer service',
+      'email': 'dristikode@gmail.com',
+      'areaServed': 'NP',
+      'availableLanguage': 'English'
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5G6JMJZ6');`,
+          }}
+        />
+        {/* Structured Data / Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+      </head>
       <body className={`${outfit.variable} ${inter.variable} antialiased font-sans`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5G6JMJZ6"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
 
         <div className="bg-background text-foreground overflow-x-clip">
           <Navigation />
