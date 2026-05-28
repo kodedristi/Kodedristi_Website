@@ -6,8 +6,8 @@ import { Plus } from "lucide-react";
 
 export default function FaqSection() {
   const faqs = [
-    { question: "Who can participate in the hackathon?", answer: "The hackathon is open to all students, professionals, and tech enthusiasts. You can participate 2 to 5 members." },
-    { question: "Is there any registration fee?", answer: "Yes, there is a registration fee of Rs. 5000 per team. However, spots are limited, so early registration is highly recommended." },
+    { question: "Who can participate in the hackathon?", answer: "The hackathon is open to all students, professionals, and tech enthusiasts. Teams of 2–4 members can participate." },
+    { question: "Is there any registration fee?", answer: "Yes, there is a registration fee of Rs. 10,000 per team. However, spots are limited, so early registration is highly recommended." },
     { question: "What should I bring?", answer: "Bring your laptop, charger, any hardware you plan to use, and your best ideas! We will provide food, beverages, and a great working environment." },
     { question: "Do I need to know AI to participate?", answer: "While the theme is centered around AI, teams benefit from diverse skill sets including design, product management, and frontend development." },
     { question: "Can we start working on our project before the event?", answer: "No, all coding and project work must begin after the official kickoff. You are allowed to use open-source libraries and APIs." },

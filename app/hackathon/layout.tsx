@@ -1,18 +1,18 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "National AI Hackathon | Kodedristi",
-  description: "Join the most advanced engineering event of the decade. 48 hours to code the future.",
+  title: "National AI Hackathon 2083 | Kodedristi",
+  description: "32-Hour National-Level AI Hackathon. 23–24 Jestha, 2083. 250+ participants. Build the future with AI.",
 };
 
 export default function HackathonLayout({ children }: { children: React.ReactNode }) {
   const eventJsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "National AI Hackathon 2026",
-    "description": "The National AI Hackathon 2026 is a 20-hour intensive coding marathon designed to push the boundaries of what's possible with Artificial Intelligence.",
-    "startDate": "2026-06-20T09:00:00+05:45",
-    "endDate": "2026-06-21T12:00:00+05:45",
+    "name": "National AI Hackathon 2083",
+    "description": "32-Hour National-Level AI Hackathon on 23–24 Jestha, 2083. 250+ participants, 2–4 members per team.",
+    "startDate": "2026-06-06T09:00:00+05:45",
+    "endDate": "2026-06-07T17:00:00+05:45",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
@@ -27,7 +27,7 @@ export default function HackathonLayout({ children }: { children: React.ReactNod
     },
     "offers": {
       "@type": "Offer",
-      "price": "5000",
+      "price": "10000",
       "priceCurrency": "NPR",
       "url": "https://forms.gle/k9XYt89brsv3dgLUA",
       "availability": "https://schema.org/InStock"

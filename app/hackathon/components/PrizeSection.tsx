@@ -7,7 +7,7 @@ export default function PrizeSection() {
   const prizes = [
     { rank: "1st Place", amount: "Rs. 75,000", icon: <Trophy className="w-12 h-12 text-[#00a884]" />, desc: "Winner's Trophy, Swags", color: "from-[#00a884]/20 to-[#00a884]/5", border: "border-[#00a884]/50", bg: "bg-white" },
     { rank: "2nd Place", amount: "Rs. 50,000", icon: <Medal className="w-12 h-12 text-blue-500" />, desc: "Runner-up Trophy, Swags", color: "from-blue-500/20 to-blue-500/5", border: "border-blue-500/50", bg: "bg-white" },
-    { rank: "3rd Place", amount: "Rs. 25,000", icon: <Award className="w-12 h-12 text-gray-800" />, desc: "Medal, Swags", color: "from-gray-600/20 to-gray-600/5", border: "border-gray-500/50", bg: "bg-white" },
+    { rank: "3rd Place", amount: "Rs. 25,000", icon: <Award className="w-12 h-12 text-gray-800" />, desc: "Trophy,Medal, Swags", color: "from-gray-600/20 to-gray-600/5", border: "border-gray-500/50", bg: "bg-white" },
   ];
 
   return (
