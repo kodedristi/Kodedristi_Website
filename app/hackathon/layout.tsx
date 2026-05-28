@@ -1,16 +1,16 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "National AI Hackathon 2083 | Kodedristi",
-  description: "32-Hour National-Level AI Hackathon. 23–24 Jestha, 2083. 250+ participants. Build the future with AI.",
+  title: "National AI Hackathon 2026 | Kodedristi",
+  description: "32-Hour National-Level AI Hackathon. 23–24 Jestha, 2026. 250+ hackers. Build the future with AI.",
 };
 
 export default function HackathonLayout({ children }: { children: React.ReactNode }) {
   const eventJsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "National AI Hackathon 2083",
-    "description": "32-Hour National-Level AI Hackathon on 23–24 Jestha, 2083. 250+ participants, 2–4 members per team.",
+    "name": "National AI Hackathon 2026",
+    "description": "32-Hour National-Level AI Hackathon on 23–24 Jestha, 2026. 250+ hackers, 2–4 members per team.",
     "startDate": "2026-06-06T09:00:00+05:45",
     "endDate": "2026-06-07T17:00:00+05:45",
     "eventStatus": "https://schema.org/EventScheduled",

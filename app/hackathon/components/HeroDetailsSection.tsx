@@ -73,12 +73,12 @@ export default function HeroDetailsSection() {
           className="relative inline-flex flex-col items-center mb-14 w-full"
         >
           {/* Hackathon Logo Image */}
-          <h1 className="sr-only">National AI Hackathon 2083</h1>
+          <h1 className="sr-only">National AI Hackathon 2026</h1>
           <div className="w-full max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px] relative z-10 group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#00a884] to-blue-600 rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity duration-700 " />
             <Image 
               src="/hackathon-logo.png" 
-              alt="National AI Hackathon 2083 Logo" 
+              alt="National AI Hackathon 2026 Logo" 
               width={550}
               height={550}
               className="w-full h-auto object-contain drop-shadow-[0_10px_30px_rgba(0,168,132,0.2)] hover:drop-shadow-[0_15px_40px_rgba(0,168,132,0.4)] transition-all duration-700 hover:scale-105" 

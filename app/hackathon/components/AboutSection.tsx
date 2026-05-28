@@ -34,10 +34,10 @@ export default function AboutSection() {
             About The Event
           </div> */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight">
-            National AI <span className="text-blue-600">Hackathon 2083</span>
+            National AI <span className="text-blue-600">Hackathon 2026</span>
           </h2>
           <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-medium">
-            The National AI Hackathon 2083 is a 32-hour intensive coding marathon designed to push the boundaries of what's possible with Artificial Intelligence. We bring together students, developers, designers, and tech enthusiasts to build solutions.
+            The National AI Hackathon 2026 is a 32-hour intensive coding marathon designed to push the boundaries of what's possible with Artificial Intelligence. We bring together students, developers, designers, and tech enthusiasts to build solutions.
           </p>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -112,7 +112,7 @@ export default function AboutSection() {
               <div>
                 <p className="text-black font-black text-xl mb-1">National Scale</p>
                 <p className="text-gray-600 font-medium leading-snug">
-                  <span className="text-blue-600 font-bold">250+ participants</span> across Nepal, industry professionals, and top companies will join the movement.
+                  <span className="text-blue-600 font-bold">250+ hackers</span> across Nepal, industry professionals, and top companies will join the movement.
                 </p>
               </div>
             </div>
